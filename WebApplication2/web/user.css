@@ -1,0 +1,25 @@
+.IR {
+  position: relative;
+  overflow: hidden;
+  font-size: 1em;
+}
+ 
+.IR em {
+  display: block;
+  position: absolute;
+  top: 0; left: 0;
+  z-index: 1;
+}
+ 
+button#IRbutton {
+  background: none;
+  border: none;
+  float: left;
+  display: inline;
+}
+ 
+#IRbutton:hover { cursor: pointer; /* cursor: hand; for IE5 */ }
+#IRbutton, #IRbutton em { width: 83px; height: 26px; }
+#IRbutton em { background: url(/examples/images/submit-button.gif) no-repeat; }
+#IRbutton:hover em, #IRbutton:focus em { background-position: -83px 0; }
+ 

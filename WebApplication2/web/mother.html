@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+div.img {
+    margin: 5px;
+    padding: 10px;
+    border: 10px solid blue;
+    height: auto;
+    width: auto;
+    float: left;
+    text-align: center;
+-webkit-animation: mymove 5s infinite;
+}	
+@-webkit-keyframes mymove {
+    50% {box-shadow: 10px 20px 30px lawngreen;}
+}
+div.img img {
+    display: inline;
+    margin: 5px;
+    border: 10px solid aquamarine;
+}
+
+div.img a:hover img {
+    border: 10px solid yellow;
+    
+}
+
+div.desc {
+  text-align: center;
+  font-weight: normal;
+  width: 120px;
+  margin: 5px;
+}
+
+</style>
+</head>
+<body background="mother.jpg">
+
+<div class="img">
+  <a href="dress8.html"><img src="dress8.jpg" alt="Golden" width="110" height="90"></a>
+ <div class="desc">Rs. 2000</div>
+</div>
+<div class="img">
+ <a href="dress9.html"><img src="dress9.jpg"alt="Cream" width="110" height="90"></a>
+ <div class="desc">Rs. 2500</div>
+</div>
+<div class="img">
+ <a  href="dress6.html"><img src="dress6.jpg" alt="Dark blue"width="110" height="90"></a>
+ <div class="desc">Rs. 1500</div>
+</div>
+
+</body>
+</html>

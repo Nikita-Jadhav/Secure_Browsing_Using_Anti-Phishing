@@ -1,0 +1,297 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Form validation</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/georgia.js"></script>
+<script type="text/javascript" src="js/cuf_run.js"></script>
+<script type="text/javascript">
+<!-- 
+function si()
+{
+
+var name=document.forms[0].name;
+var userid=document.forms[0].userid;
+var password=document.forms[0].password;
+var rpassword=document.forms[0].rpassword;
+var male=document.forms[0].male;
+var contact=document.forms[0].contact;
+
+var fletters = /^[A-Za-z]+$/;
+var n = fletters.test(document.forms[0].name.value); 
+var uuserid = /^[0-9a-zA-Z]+$/;
+var u = uuserid.test(document.forms[0].userid.value);
+var numbers = /^\d{10}$/;
+var t = numbers.test(document.forms[0].contact.value);
+
+valid = true;
+
+if(n==false)
+{
+name.focus();
+alert("Username not valid(should contain alphabets)");
+valid=false;
+}
+else if(u==false)
+{
+userid.focus();
+alert("UserID cannot be left blank");
+valid=false;
+}
+else if(password.value==0 )
+{
+password.focus();
+alert("Password cannot be blank ");
+valid=false;
+}
+else if( password.value.length<8)
+{
+password.focus();
+alert("Password must be greater than 7 Letter");
+valid=false;
+}
+else if(password.value!=rpassword.value)
+{
+rpassword.focus();
+alert("Password Mismatch");
+valid=false;
+}
+else if(male.value==0)
+{
+male.focus();
+alert("Select male or female");
+valid=false;
+}
+else if ( t == false )
+    	{	
+		contact.focus();
+        		alert ( "Please enter valid mobile number of 10 digits." );
+        		valid = false;
+		}
+
+else
+{
+alert("all done");
+document.forms[0].action="http://localhost:8080/WebApplication2/UploadImage123";
+document.forms[0].submit();
+}
+return valid;
+}
+//-->
+</script>
+
+
+<style>
+body  {
+    background-image: url('regbg.jpg');}
+
+
+#header {
+    background-color:pink;
+    color:white;
+    font-size: 50px;
+    text-align:center;
+    padding:30px;
+    -webkit-animation: myfirst 100s; 
+    animation: myfirst 5s;
+}
+#sec {
+    line-height:30px;
+
+    height:300px;
+    width:200px;
+    float:left;
+    padding:5px;	      
+}
+#nav {
+ text-align:center;
+    line-height:20px;
+    background-color:lightyellow;
+    height:400px;
+    width:500px;
+    float:left;
+    padding:5px;	      
+    
+}
+
+
+@-webkit-keyframes myfirst {
+    0%   {background: AliceBlue ;} 5%  {background: Aquamarine ;}
+    10%  {background: CornflowerBlue ;}15%  {background: DarkBlue ;} 
+     20%  {background: DarkMagenta ;} 25%  {background:DarkOrchid ;}    
+     30%  {background:NavajoWhite  ;}    35%  {background:Orchid ;}
+     40%  {background:PaleGreen ;}    45%  {background:Plum  ;}
+      50% {background: Violet ;} 550%  {background: CornflowerBlue ;} 65%  {background: DarkBlue ;} 
+     70%  {background: DarkMagenta ;} 75%  {background:DarkOrchid ;}    
+     80%  {background:NavajoWhite  ;}    85%  {background:Orchid ;}
+     90%   {background: AliceBlue ;} 95%  {background: Aquamarine ;}
+     100%  {background: Tomato ;}
+}
+</style>
+</head>
+
+<body onload="document.registration.userid.focus();">
+<div id="header">Register Now !!!</div>
+
+<!--<form method="POST" action="regggg.jsp"> -->
+<form method="post"  enctype="multipart/form-data" onSubmit="return si();">
+ <!--   <form method="post" action="UploadImage" enctype="multipart/form-data"> -->
+<div id="sec"></div><div id="sec"></div>
+<div id="nav">
+<h1>Create Your Account </h1>
+<hr>
+<table border=0>
+
+<tr>
+<td><b>Name:</b>
+<td><input type="text" name=name size=20  required = "">
+</tr>
+
+<tr>
+<td><b>UserId:</b>
+<td><input type="text" name=userid size=20 maxlength=12  required = "">
+</tr>
+
+
+
+<tr>
+<td><b>Password:</b>
+<td><input type="password" name=password size=20  required = "">
+</tr>
+
+<tr>
+<td><b>Re-enter the Password:</b>
+<td><input type="password" name=rpassword size=20  required = "">
+</tr>
+
+<tr>
+<th rowspan=2>Gender:</th>
+<td><input type=radio name=male id="male"  required = "">Male </input></td></tr>
+<tr>
+<td><input type=radio name="male" id="female"  required = "">Female</input> </td></tr>
+</tr>
+<tr>
+
+<th>Date of Birth :</th>
+<td>
+<select required = "">
+<option>1</option> 
+<option>2</option> 
+<option>3</option> 
+<option>4</option> 
+<option>5</option> 
+<option>6</option> 
+<option>7</option> 
+<option>8</option> 
+<option>9</option> 
+<option>10</option> 
+<option>11</option> 
+<option>12</option> 
+<option>13</option> 
+<option>14</option> 
+<option>15</option> 
+<option>16</option>
+<option>17</option> 
+<option>18</option> 
+<option>19</option> 
+<option>20</option> 
+<option>21</option> 
+<option>22</option> 
+<option>23</option>
+<option>24</option> 
+<option>25</option> 
+<option>26</option> 
+<option>27</option> 
+<option>28</option> 
+<option>29</option> 
+<option>30</option> 
+<option>31</option> 
+</select>
+<select required = "">
+<option>JAN</option> 
+<option>FEB</option> 
+<option>MAR</option> 
+<option>APR</option> 
+<option>MAY</option> 
+<option>JUN</option> 
+<option>JUL</option> 
+<option>AUG</option> 
+<option>SEP</option> 
+<option>OCT</option> 
+<option>NOV</option> 
+<option>DEC</option> 
+</select>
+<select required = "">
+<option>1989</option> 
+<option>1990</option> 
+<option>1991</option> 
+<option>1992</option> 
+<option>1993</option> 
+<option>1994</option> 
+<option>1995</option> 
+<option>1996</option> 
+<option>1997</option> 
+<option>1998</option> 
+<option>1999</option> 
+<option>2000</option>
+<option>2001</option>
+<option>2002</option>
+<option>2003</option>
+<option>2004</option>
+<option>2005</option>
+<option>2006</option>
+<option>2007</option>
+<option>2008</option>
+<option>2009</option>
+<option>2010</option>
+<option>2011</option>
+<option>2012</option>
+<option>2013</option>
+<option>2014</option>
+</select>
+</td> 
+</tr>
+
+<tr>
+<th>
+Phone no:</th>
+<td><input type=text maxlength=10  size=10 name=contact id="contact" required = ""></input></td>
+</tr>
+
+<tr>
+
+</table>
+
+<table>
+   
+     
+<tr>
+<!--<td>
+    <a href="http://localhost:8080/WebApplication2/uploadImage.jsp">Select a image :</a>
+
+    
+</td>-->
+ <tr>
+                    <td>Portrait Photo: </td>
+                    <td><input type="file" name=image size="50" required=""/></td>
+                </tr>
+                <tr>
+
+
+</tr>
+<tr>
+<td><pre>	</pre></td>
+<td><pre>	</pre></td>
+
+
+<td><input type="image" src="submit.gif" alt="Submit details" onclick="si()"></td>
+</tr>
+</table>
+</div>
+</form>
+</body>
+</html>

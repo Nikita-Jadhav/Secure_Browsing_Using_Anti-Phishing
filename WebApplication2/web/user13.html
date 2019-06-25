@@ -1,0 +1,208 @@
+<html>
+<head>
+<title>Form validation</title>
+
+<script src="validation.js">
+</script>
+
+<style>
+body  {
+    background-image: url('regbg.jpg');}
+
+
+#header {
+    background-color:pink;
+    color:white;
+    font-size: 50px;
+    text-align:center;
+    padding:30px;
+    -webkit-animation: myfirst 100s; 
+    animation: myfirst 5s;
+}
+#sec {
+    line-height:30px;
+
+    height:300px;
+    width:200px;
+    float:left;
+    padding:5px;	      
+}
+#nav {
+ text-align:center;
+    line-height:20px;
+    background-color:lightyellow;
+    height:400px;
+    width:500px;
+    float:left;
+    padding:5px;	      
+    
+}
+
+
+@-webkit-keyframes myfirst {
+    0%   {background: AliceBlue ;} 5%  {background: Aquamarine ;}
+    10%  {background: CornflowerBlue ;}15%  {background: DarkBlue ;} 
+     20%  {background: DarkMagenta ;} 25%  {background:DarkOrchid ;}    
+     30%  {background:NavajoWhite  ;}    35%  {background:Orchid ;}
+     40%  {background:PaleGreen ;}    45%  {background:Plum  ;}
+      50% {background: Violet ;} 550%  {background: CornflowerBlue ;} 65%  {background: DarkBlue ;} 
+     70%  {background: DarkMagenta ;} 75%  {background:DarkOrchid ;}    
+     80%  {background:NavajoWhite  ;}    85%  {background:Orchid ;}
+     90%   {background: AliceBlue ;} 95%  {background: Aquamarine ;}
+     100%  {background: Tomato ;}
+}
+</style>
+</head>
+
+<body onload="document.registration.userid.focus();">
+<div id="header">Register Now !!!</div>
+
+<form action="r1.jsp">
+<div id="sec"></div><div id="sec"></div>
+<div id="nav">
+<h1>Create Your Account <hr>
+<table border=0>
+
+<tr>
+<td><b>Name:</b>
+<td><input type="text" name=name size=20>
+</tr>
+
+<tr>
+<td><b>Username:</b>
+<td><input type="text" name= userid size=20 maxlength=12>
+</tr>
+
+
+
+<tr>
+<td><b>Password:</b>
+<td><input type="password" name=password size=20>
+</tr>
+
+<tr>
+<td><b>Re-enter the Password:</b>
+<td><input type="password" name=password size=20>
+</tr>
+
+<tr>
+<th rowspan=2>Gender:</th>
+<td><input type=radio name="male" id="male">Male </input></td></tr>
+<tr>
+<td><input type=radio name="male" id="female">Female</input> </td></tr>
+</tr>
+<tr>
+<th>Date of Birth :</th>
+<td>
+<select>
+<option>1</option> 
+<option>2</option> 
+<option>3</option> 
+<option>4</option> 
+<option>5</option> 
+<option>6</option> 
+<option>7</option> 
+<option>8</option> 
+<option>9</option> 
+<option>10</option> 
+<option>11</option> 
+<option>12</option> 
+<option>13</option> 
+<option>14</option> 
+<option>15</option> 
+<option>16</option>
+<option>17</option> 
+<option>18</option> 
+<option>19</option> 
+<option>20</option> 
+<option>21</option> 
+<option>22</option> 
+<option>23</option>
+<option>24</option> 
+<option>25</option> 
+<option>26</option> 
+<option>27</option> 
+<option>28</option> 
+<option>29</option> 
+<option>30</option> 
+<option>31</option> 
+</select>
+<select>
+<option>JAN</option> 
+<option>FEB</option> 
+<option>MAR</option> 
+<option>APR</option> 
+<option>MAY</option> 
+<option>JUN</option> 
+<option>JUL</option> 
+<option>AUG</option> 
+<option>SEP</option> 
+<option>OCT</option> 
+<option>NOV</option> 
+<option>DEC</option> 
+</select>
+<select>
+<option>1989</option> 
+<option>1990</option> 
+<option>1991</option> 
+<option>1992</option> 
+<option>1993</option> 
+<option>1994</option> 
+<option>1995</option> 
+<option>1996</option> 
+<option>1997</option> 
+<option>1998</option> 
+<option>1999</option> 
+<option>2000</option>
+<option>2001</option>
+<option>2002</option>
+<option>2003</option>
+<option>2004</option>
+<option>2005</option>
+<option>2006</option>
+<option>2007</option>
+<option>2008</option>
+<option>2009</option>
+<option>2010</option>
+<option>2011</option>
+<option>2012</option>
+<option>2013</option>
+<option>2014</option>
+</select>
+</td> 
+</tr>
+
+<tr>
+<th>
+Phone no:</th>
+<td><input type=text maxlength=10  size=10 name="contact" id="contact"></input></td>
+</tr>
+
+<tr>
+<td><b>Select a image :</b>
+</table>
+<table>
+<tr>
+<td>
+<img src="oimage.jpg" alt="Original Image" style="width:80px;height:80px;">
+</td>
+<td>
+<img src="dog.jpg" alt="Original Image" style="width:80px;height:80px;">
+</td>
+<td>
+<img src="baby.jpg" alt="Original Image" style="width:80px;height:80px;">
+</td>
+<td>
+<img src="tiger.jpg" alt="Original Image" style="width:80px;height:80px;">
+</td>
+</tr>
+<tr>
+<td><pre>	</pre></td>
+<td><pre>	</pre></td>
+<td><input type="image" src="submit.gif" alt="Submit details"></td>
+</tr>
+</table>
+</div>
+</form>
+</body>
+</html>

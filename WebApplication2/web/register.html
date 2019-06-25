@@ -1,0 +1,160 @@
+<html>
+<head>
+<style>
+body{
+background:url("faded.jpg");
+                background-size:1000px 3000px;
+                 background-repeat:norepeat;
+	
+}
+</style>
+<script src="register1.js"></script>
+
+</head>
+<body onload-="document.registration.id.focus();">
+
+<h1 style="margin-left:50px;text-decoration:bold;color:black;font-family:times">Sign-up for free Below</h1>
+<b>OnlineAuction.com is a fast-growing marketplace community of buyers and sellers where sellers keep all their earnings so users have the freedom to safely and easily buy and sell without anyone taking a piece of the action.</b>
+<form name="register" action=register.php  method=post onSubmit="return formValidation();">
+<table>
+<h3 style="margin-left:50px;text-decoration:bold;color:red;font-family:times">Personal details</h3>
+<tr>
+<th>
+First Name/username:</th>
+<td><input type=text   size-10 id="id" name="id"></input></td>
+
+<th><b>
+Last Name:</b></th>
+<td><input type=text  id="lname" name="lname"></input></td>
+</tr>
+<tr>
+<th>
+Address:</th>
+<td>
+<textarea name:address row=5 column=5 size=10 name="address" id="address" ></textarea>
+</td></tr>
+<tr>
+<th rowspan=2>Gender:</th>
+<td><input type=radio name="male" id="male">Male </input></td></tr>
+<tr>
+<td><input type=radio name="male" id="female">Female</input> </td></tr>
+</tr>
+<tr>
+<th>Date of Birth :</th>
+<td>
+<select>
+<option>1</option> 
+<option>2</option> 
+<option>3</option> 
+<option>4</option> 
+<option>5</option> 
+<option>6</option> 
+<option>7</option> 
+<option>8</option> 
+<option>9</option> 
+<option>10</option> 
+<option>11</option> 
+<option>12</option> 
+<option>13</option> 
+<option>14</option> 
+<option>15</option> 
+<option>16</option>
+<option>17</option> 
+<option>18</option> 
+<option>19</option> 
+<option>20</option> 
+<option>21</option> 
+<option>22</option> 
+<option>23</option>
+<option>24</option> 
+<option>25</option> 
+<option>26</option> 
+<option>27</option> 
+<option>28</option> 
+<option>29</option> 
+<option>30</option> 
+<option>31</option> 
+</select>
+<select>
+<option>JAN</option> 
+<option>FEB</option> 
+<option>MAR</option> 
+<option>APR</option> 
+<option>MAY</option> 
+<option>JUN</option> 
+<option>JUL</option> 
+<option>AUG</option> 
+<option>SEP</option> 
+<option>OCT</option> 
+<option>NOV</option> 
+<option>DEC</option> 
+</select>
+<select>
+<option>1989</option> 
+<option>1990</option> 
+<option>1991</option> 
+<option>1992</option> 
+<option>1993</option> 
+<option>1994</option> 
+<option>1995</option> 
+<option>1996</option> 
+<option>1997</option> 
+<option>1998</option> 
+<option>1999</option> 
+<option>2000</option>
+<option>2001</option>
+<option>2002</option>
+<option>2003</option>
+<option>2004</option>
+<option>2005</option>
+<option>2006</option>
+<option>2007</option>
+<option>2008</option>
+<option>2009</option>
+<option>2010</option>
+<option>2011</option>
+<option>2012</option>
+<option>2013</option>
+<option>2014</option>
+</select>
+</td> 
+</tr>
+<tr>
+<th>Nationality:</th>
+<td>
+<input type=text name="nationality" id="nationality"></input>
+</td>
+</tr>
+<tr>
+<th>
+Phone no:</th>
+<td><input type=text maxlength=10  size=10 name="contact" id="contact"></input></td>
+</tr>
+<tr>
+<th>
+Email-id:</th>
+<td><input type=text   size=10 name="email" id="email"></input></td>
+</tr>
+<tr>
+<th>
+Password:</th>
+<td><input name="pwd" type=password id="pwd"></input></td>
+</tr></table>
+<p>By selection seller/buyer I agree to the following:
+<ul>
+<li> I accept the online auction.com privacy policy</li>
+<li>I may receive email from online auction and can my prefernce in my account manager</li>
+<h2>Do you desire to be a seller??</h2>
+<table><a href=index1.php>Seller/vendor</a>
+<br>
+<br>
+<br>
+<input type=submit value="submit" name="submit"></input>
+
+<input type=reset value="Reset" name="reset"></input>
+
+</table>
+
+
+<br>
+</form>

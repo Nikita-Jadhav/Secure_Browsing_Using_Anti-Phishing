@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Making it swipeable - Swipeable Side Menu</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="jquery.touchSwipe.min.js"></script>
+      
+     <link rel="stylesheet" type="text/css" href=style11.css>
+    <style type="text/css">
+      body, html {
+          height: 100%;
+          margin: 0;
+          overflow:hidden;
+          font-family: helvetica;
+          font-weight: 100;
+      }
+      .container {
+          position: relative;
+          height: 100%;
+          width: 100%;
+          left: 0;
+          -webkit-transition:  left 0.4s ease-in-out;
+          -moz-transition:  left 0.4s ease-in-out;
+          -ms-transition:  left 0.4s ease-in-out;
+          -o-transition:  left 0.4s ease-in-out;
+          transition:  left 0.4s ease-in-out;
+      }
+      .container.open-sidebar {
+          left: 240px;
+      }
+      
+      .swipe-area {
+          position: absolute;
+          width: 50px;
+          left: 0;
+      top: 0;
+          height: 100%;
+          background: #f3f3f3;
+          z-index: 0;
+      }
+      #sidebar {
+          background: #DF314D;
+          position: absolute;
+          width: 240px;
+          height: 100%;
+          left: -240px;
+          box-sizing: border-box;
+          -moz-box-sizing: border-box;
+      }
+      #sidebar ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+      }
+      #sidebar ul li {
+          margin: 0;
+      }
+      #sidebar ul li a {
+          padding: 15px 20px;
+          font-size: 16px;
+          font-weight: 100;
+          color: white;
+          text-decoration: none;
+          display: block;
+          border-bottom: 1px solid #C9223D;
+          -webkit-transition:  background 0.3s ease-in-out;
+          -moz-transition:  background 0.3s ease-in-out;
+          -ms-transition:  background 0.3s ease-in-out;
+          -o-transition:  background 0.3s ease-in-out;
+          transition:  background 0.3s ease-in-out;
+      }
+      #sidebar ul li:hover a {
+          background: #C9223D;
+      }
+      .main-content {
+          width: 100%;
+          height: 100%;
+          padding: 10px;
+          box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          position: relative;
+      }
+      .main-content .content{
+          box-sizing: border-box;
+          -moz-box-sizing: border-box;
+      padding-left: 60px;
+      width: 100%;
+      }
+      .main-content .content h1{
+          font-weight: 100;
+      }
+      .main-content .content p{
+          width: 100%;
+          line-height: 160%;
+      }
+      .main-content #sidebar-toggle {
+          background: #DF314D;
+          border-radius: 3px;
+          display: block;
+          position: relative;
+          padding: 10px 7px;
+          float: left;
+      }
+      .main-content #sidebar-toggle .bar{
+           display: block;
+          width: 18px;
+          margin-bottom: 3px;
+          height: 2px;
+          background-color: #fff;
+          border-radius: 1px;   
+      }
+      .main-content #sidebar-toggle .bar:last-child{
+           margin-bottom: 0;   
+      }
+    </style>
+    <script type="text/javascript">
+      $(window).load(function(){
+        $("[data-toggle]").click(function() {
+          var toggle_el = $(this).data("toggle");
+          $(toggle_el).toggleClass("open-sidebar");
+        });
+         $(".swipe-area").swipe({
+              swipeStatus:function(event, phase, direction, distance, duration, fingers)
+                  {
+                      if (phase=="move" && direction =="right") {
+                           $(".container").addClass("open-sidebar");
+                           return false;
+                      }
+                      if (phase=="move" && direction =="left") {
+                           $(".container").removeClass("open-sidebar");
+                           return false;
+                      }
+                  }
+          }); 
+      });
+      
+    </script>
+  </head>
+ <body id="body-color">
+    <div class="container">
+      <div id="sidebar">
+          <ul>
+             <li><a href="sister_dress1.html">Sister</a></li>
+              <li><a href="bro_watch.html">Brother</a></li>
+              <li><a href="mother_acc.html">Mother</a></li>
+                  <li><a href="dad_shirt.html">Father</a></li>
+          </ul>
+      </div>
+      <div class="main-content">
+          <div class="swipe-area"></div>
+          <a href="#" data-toggle=".container" id="sidebar-toggle">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+          </a>
+          <div class="content">
+           
+ <div id="Sign-In"> <fieldset style="width:30%">
+<legend>LOG-IN HERE</legend>
+ <form method="POST" action="up223.php"> 
+<div id="nav">
+
+<table border=0>
+
+<tr><td>Name of receiver:</td><td><input type="text" size=20 name=rname></td></tr>
+<tr><td>Address:</td><td><input type="text" name=address size=20></td></tr>
+
+<tr>
+<td>Delivery Date</td>
+
+<td><select name=date>
+<option value="option1">1</option>
+<option value="option1">2</option>
+<option value="option1">3</option>
+<option value="option1">4</option>
+<option value="option1">5</option>
+<option value="option1">6</option>
+<option value="option1">7</option>
+<option value="option1">8</option>
+<option value="option1">9</option>
+<option value="option1">10</option>
+<option value="option1">11</option>
+<option value="option1">12</option>
+<option value="option1">13</option>
+<option value="option1">14</option>
+<option value="option1">15</option>
+<option value="option1">16</option>
+<option value="option1">17</option>
+<option value="option1">18</option>
+<option value="option1">19</option>
+<option value="option1">20</option>
+<option value="option1">21</option>
+<option value="option1">22</option>
+<option value="option1">23</option>
+<option value="option1">24</option>
+<option value="option1">25</option>
+<option value="option1">26</option>
+<option value="option1">27</option>
+<option value="option1">28</option>
+<option value="option1">29</option>
+<option value="option1">30</option>
+<option value="option1">31</option>
+</select>
+<select name="month">
+<option value="option1">Jan</option>
+<option value="option1">Feb</option>
+<option value="option1">Mar</option>
+<option value="option1">Apr</option>
+<option value="option1">May</option>
+<option value="option1">Jun</option>
+<option value="option1">Jul</option>
+<option value="option1">Aug</option>
+<option value="option1">Sep</option>
+<option value="option1">Oct</option>
+<option value="option1">Nov</option>
+<option value="option1">Dec</option></select>
+</td>
+</tr>
+<tr>
+<td>City</td>
+<td><select name=nationality>
+<option value="option1">Ahmednagar</option>
+<option value="option1">Pune</option>
+<option value="option1">Mumbai</option>
+<option value="option1">Delhi</option>
+<option value="option1">Bangalore</option>
+<option value="option1">Chennai</option></select>
+</td></tr>
+<tr><td>Payment</td></tr>
+<tr><td><hr></td></tr>
+<tr><td> Credit Card No.:</td><td><input type="text" name=cno size=20></td></tr>
+<tr><td> Pay through </td></tr>
+<tr><td><img src="credit.jpg" width=200px height=100px></td></tr>
+<tr>
+<td><pre>	</pre></td>
+<td><a href="final.html"><input type="submit" name="submit" id="submit"></a></td>
+</tr>
+
+</table>              
+</div></div>
+      </div>
+    </div>
+  </body>
+</html>

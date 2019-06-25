@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>
+Successful Registration
+</title>
+</head>
+<body>
+<h1> You have registered successfully</h1>
+</body>
+
+<?php
+
+
+mysql_connect("localhost","root","") or die(mysql_error());
+
+$dbase_name="registration";
+mysql_select_db($dbase_name) or die(mysql_error());
+
+ $userid = $_POST["userid"];
+ $password = $_POST["password"];
+ $username =$_POST["username"];
+
+
+ 
+   $email = $_POST["email"];
+ 
+   
+  
+
+
+
+
+
+$query="INSERT INTO `reg` values('$userid','$password','$username','$email')";
+mysql_query($query) or die(mysql_error());
+
+
+
+  
+
+mysql_close();
+?>
+</html>
